@@ -22,7 +22,7 @@ char* get_python_response(const char* input) {
     // Construct the command to call the Python script
     char command[MAX_INPUT_SIZE + 100];
     
-    // Use the Poetry run command to ensure we're using the correct environment
+    // Call the Python module directly
     // Escape quotes in the input to prevent command injection
     char escaped_input[MAX_INPUT_SIZE * 2];
     int j = 0;
@@ -36,7 +36,7 @@ char* get_python_response(const char* input) {
     
     // Construct the command
     snprintf(command, sizeof(command), 
-             "poetry run python -m neurochef.logic \"%s\"", 
+             "python -m neurochef.logic \"%s\"", 
              escaped_input);
     
     // Open a pipe to the command

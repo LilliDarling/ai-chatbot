@@ -15,28 +15,31 @@ NeuroChef is a hybrid C/Python chatbot that provides meal suggestions based on s
 
 ## Requirements
 
-- C compiler (gcc recommended)
+- C compiler (gcc or MSYS2 MinGW)
 - Python 3.8 or higher
-- Poetry (for Python dependency management)
+- CMake 3.5 or higher
+- Ninja build system
 
 ## Installation
 
 1. Clone the repository
-2. Install Python dependencies:
+2. Configure and build with CMake:
    ```
    cd neurochef
-   poetry install
-   ```
-3. Compile the C program:
-   ```
-   make
+   cmake -B build -G Ninja
+   cmake --build build
    ```
 
 ## Usage
 
 Run the chatbot:
 ```
-./neurochef
+./build/neurochef
+```
+
+Or using CMake:
+```
+cmake --build build --target run
 ```
 
 Example interactions:
