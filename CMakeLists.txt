@@ -5,8 +5,18 @@ project(NeuroChef)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
 
+# Source files
+set(SOURCES
+    main.c
+    recipe_utils.c
+)
+
 # Add the executable
-add_executable(neurochef main.c)
+add_executable(neurochef ${SOURCES})
+
+# Copy meal_data.json to build directory
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/meal_data.json
+               ${CMAKE_CURRENT_BINARY_DIR}/meal_data.json COPYONLY)
 
 # Add custom target for running tests
 add_custom_target(test
