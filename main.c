@@ -11,6 +11,7 @@
 
 #define MAX_INPUT_SIZE 1024
 #define MAX_OUTPUT_SIZE 4096
+#define MAX_COMMAND_SIZE (MAX_INPUT_SIZE * 2 + 100) // Allow for escaped input and command prefix
 
 /**
  * Call the Python script and get the response
@@ -19,8 +20,7 @@
  * @return The response from the Python script
  */
 char* get_python_response(const char* input) {
-    // Construct the command to call the Python script
-    char command[MAX_INPUT_SIZE + 100];
+    char command[MAX_COMMAND_SIZE];
     
     // Call the Python module directly
     // Escape quotes in the input to prevent command injection
@@ -33,23 +33,30 @@ char* get_python_response(const char* input) {
         escaped_input[j++] = input[i];
     }
     escaped_input[j] = '\0';
-    
-    // Construct the command
+
     snprintf(command, sizeof(command), 
              "python -m neurochef.logic \"%s\"", 
              escaped_input);
-    
-    // Open a pipe to the command
+
     FILE* pipe = popen(command, "r");
     if (!pipe) {
         return "Error: Failed to run Python script.";
     }
-    
-    // Read the output
+
     static char output[MAX_OUTPUT_SIZE];
-    fgets(output, sizeof(output), pipe);
-    
-    // Close the pipe
+    if (!fgets(output, sizeof(output), pipe)) {
+        // If fgets returns NULL, there was an error or no output
+        int exit_code = pclose(pipe);
+        if (exit_code != 0) {
+            // Check if the error might be due to Python not being found
+            if (strstr(command, "python") != NULL) {
+                return "Error: Python not found. Please ensure Python is installed and in your PATH.";
+            }
+            return "Error: Failed to execute command.";
+        }
+        return "No output from command.";
+    }
+
     pclose(pipe);
     
     return output;
@@ -60,34 +67,26 @@ char* get_python_response(const char* input) {
  */
 int main() {
     char input[MAX_INPUT_SIZE];
-    
-    // Display welcome message
+
     printf("Welcome to NeuroChef!\n");
-    
-    // Main interaction loop
+
     while (1) {
-        // Prompt for input
         printf("> ");
         fflush(stdout);
-        
-        // Get user input
+
         if (!fgets(input, sizeof(input), stdin)) {
-            break;  // Exit on EOF
+            break;
         }
-        
-        // Remove trailing newline
+
         input[strcspn(input, "\n")] = 0;
-        
-        // Check for exit command
+
         if (strcmp(input, "exit") == 0 || strcmp(input, "quit") == 0) {
             printf("Goodbye! Take care.\n");
             break;
         }
-        
-        // Get response from Python script
+
         char* response = get_python_response(input);
-        
-        // Display the response
+
         printf("%s\n", response);
     }
     

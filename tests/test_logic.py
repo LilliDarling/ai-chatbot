@@ -15,20 +15,32 @@ mock_data = {
     "meals": [
         {
             "name": "Smoothie",
-            "sensory": ["smooth"],
-            "prep_time": "5 minutes",
+            "sensory_profile": {
+                "texture": ["smooth"],
+                "temperature": ["cold"],
+                "taste": ["sweet"]
+            },
+            "prep_time": {
+                "duration": 5,
+                "unit": "minutes"
+            },
             "description": "A quick and easy meal."
         }
     ],
-    "sensory_avoidance": {
-        "crunchy": ["raw vegetables"]
+    "sensory_considerations": {
+        "avoidance_triggers": {
+            "texture": ["crunchy", "slimy", "chewy"]
+        },
+        "preferred_sensory_profiles": {
+            "texture": ["smooth", "soft", "creamy"]
+        },
+        "texture_mapping": {
+            "crunchy": ["consider finely chopped or pureed alternatives", "offer a soft accompaniment"]
+        }
     },
-    "sensory_suggestions": {
-        "crunchy": ["smoothies"]
-    },
-    "executive_function_challenges": {
-        "difficulty_planning": ["meal prepping"],
-        "difficulty_remembering": ["meal reminders"]
+    "executive_function_support_strategies": {
+        "difficulty_planning": ["meal prepping", "theme days"],
+        "memory_challenges": ["meal reminders", "written recipes"]
     }
 }
 

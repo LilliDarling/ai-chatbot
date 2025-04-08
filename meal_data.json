@@ -1,0 +1,267 @@
+{
+    "meta": {
+        "description": "An in-depth JSON schema for neurodivergent meal planning, incorporating sensory considerations, executive function support, and customizable options.",
+        "version": "1.1",
+        "last_updated": "2025-04-08"
+    },
+    "meals": [
+        {
+            "id": "smoothie_01",
+            "name": "Berry Blast Smoothie",
+            "meal_type": ["breakfast", "snack"],
+            "sensory_profile": {
+                "texture": ["smooth", "liquid"],
+                "temperature": ["cold"],
+                "taste": ["sweet", "tangy"],
+                "smell": ["fruity"]
+            },
+            "prep_time": {
+                "duration": 5,
+                "unit": "minutes"
+            },
+            "cook_time": {
+                "duration": 0,
+                "unit": "minutes"
+            },
+            "description": "A quick, refreshing, and easily customizable smoothie packed with antioxidants.",
+            "ingredients": [
+                {"name": "Frozen berries", "notes": "Mix of strawberries, blueberries, raspberries"},
+                {"name": "Yogurt", "options": ["dairy", "non-dairy"], "notes": "Plain or flavored"},
+                {"name": "Milk/Liquid", "options": ["dairy", "non-dairy", "juice"]},
+                {"name": "Optional boosters", "options": ["chia seeds", "flax seeds", "protein powder", "spinach (mild taste)"]}
+            ],
+            "preparation_steps": [
+                "Combine all ingredients in a blender.",
+                "Blend until smooth.",
+                "Pour into a glass and enjoy immediately."
+            ],
+            "executive_function_support": {
+                "difficulty_planning": true,
+                "difficulty_initiating": false,
+                "difficulty_monitoring": false
+            },
+            "notes": "Can be pre-portioned into freezer bags for even quicker mornings."
+        },
+        {
+            "id": "mashed_potatoes_02",
+            "name": "Creamy Garlic Mashed Potatoes",
+            "meal_type": ["side", "comfort"],
+            "sensory_profile": {
+                "texture": ["smooth", "soft", "creamy"],
+                "temperature": ["warm"],
+                "taste": ["savory", "mildly garlic-y"],
+                "smell": ["earthy", "mildly aromatic"]
+            },
+            "prep_time": {
+                "duration": 15,
+                "unit": "minutes"
+            },
+            "cook_time": {
+                "duration": 20,
+                "unit": "minutes"
+            },
+            "description": "A comforting and easily digestible side dish with a smooth and satisfying texture.",
+            "ingredients": [
+                {"name": "Potatoes", "options": ["russet", "yukon gold"], "notes": "Peeled and cubed"},
+                {"name": "Milk/Cream", "options": ["dairy", "non-dairy"]},
+                {"name": "Butter/Oil", "options": ["dairy", "non-dairy", "olive oil"]},
+                {"name": "Garlic", "options": ["fresh (minced, use sparingly)", "garlic powder"], "notes": "Adjust amount to preference"},
+                {"name": "Salt", "notes": "To taste"},
+                {"name": "Pepper", "notes": "To taste"}
+            ],
+            "preparation_steps": [
+                "Boil potatoes in salted water until fork-tender.",
+                "Drain potatoes well.",
+                "Mash potatoes with milk/cream, butter/oil, and garlic (if using).",
+                "Season with salt and pepper to taste.",
+                "Whip until desired consistency is reached."
+            ],
+            "executive_function_support": {
+                "difficulty_planning": false,
+                "difficulty_initiating": false,
+                "difficulty_monitoring": false
+            },
+            "notes": "Can be made ahead of time and reheated gently."
+        },
+        {
+            "id": "chicken_salad_03",
+            "name": "Mild Chicken Salad (Customizable Texture)",
+            "meal_type": ["lunch", "snack"],
+            "sensory_profile": {
+                "texture": ["soft", "variable"],
+                "temperature": ["cold"],
+                "taste": ["savory", "mild"],
+                "smell": ["mildly meaty"]
+            },
+            "prep_time": {
+                "duration": 15,
+                "unit": "minutes"
+            },
+            "cook_time": {
+                "duration": 20,
+                "unit": "minutes"
+            },
+            "description": "A versatile meal where texture can be adjusted based on preference. Keep it smooth or include finely chopped additions.",
+            "ingredients": [
+                {"name": "Cooked chicken", "options": ["shredded", "finely diced"], "notes": "Leftover or rotisserie chicken works well"},
+                {"name": "Mayonnaise/Alternative", "options": ["dairy", "non-dairy", "Greek yogurt"]},
+                {"name": "Celery", "options": ["finely diced (optional)", "omit for smooth texture"]},
+                {"name": "Grapes", "options": ["halved (optional)", "omit for specific textures"]},
+                {"name": "Salt", "notes": "To taste"},
+                {"name": "Pepper", "notes": "To taste"},
+                {"name": "Optional mild additions", "options": ["finely chopped cucumber", "fresh dill"]}
+            ],
+            "preparation_steps": [
+                "Combine cooked chicken, mayonnaise/alternative, and any optional ingredients in a bowl.",
+                "Mix gently until well combined.",
+                "Season with salt and pepper to taste.",
+                "Serve on bread, crackers, lettuce wraps, or eat with a fork."
+            ],
+            "executive_function_support": {
+                "difficulty_planning": false,
+                "difficulty_initiating": false,
+                "difficulty_monitoring": false
+            },
+            "notes": "Prepare components (cooked chicken) in advance for easier assembly."
+        },
+        {
+            "id": "pasta_with_pesto_04",
+            "name": "Smooth Pasta with Mild Pesto",
+            "meal_type": ["lunch", "dinner"],
+            "sensory_profile": {
+                "texture": ["smooth", "slippery"],
+                "temperature": ["warm"],
+                "taste": ["savory", "herby", "mildly nutty"],
+                "smell": ["herbal", "mildly oily"]
+            },
+            "prep_time": {
+                "duration": 5,
+                "unit": "minutes"
+            },
+            "cook_time": {
+                "duration": 10,
+                "unit": "minutes"
+            },
+            "description": "A simple and flavorful pasta dish with a smooth sauce. Choose smooth pasta shapes.",
+            "ingredients": [
+                {"name": "Pasta", "options": ["penne", "rotini", "shells", "fusilli (smooth varieties)"]},
+                {"name": "Pesto", "options": ["store-bought (check ingredients for strong flavors)", "homemade (adjust garlic)"]},
+                {"name": "Optional toppings", "options": ["parmesan cheese (shredded finely)", "pine nuts (if tolerated)"]}
+            ],
+            "preparation_steps": [
+                "Cook pasta according to package directions.",
+                "Drain pasta and return to the pot.",
+                "Stir in pesto until evenly coated.",
+                "Serve warm with optional toppings."
+            ],
+            "executive_function_support": {
+                "difficulty_planning": false,
+                "difficulty_initiating": false,
+                "difficulty_monitoring": false
+            },
+            "notes": "Can add cooked chicken or vegetables for a more complete meal."
+        },
+        {
+            "id": "baked_sweet_potato_05",
+            "name": "Soft Baked Sweet Potato",
+            "meal_type": ["side", "snack"],
+            "sensory_profile": {
+                "texture": ["soft", "fluffy"],
+                "temperature": ["warm"],
+                "taste": ["sweet", "earthy"],
+                "smell": ["sweet", "root vegetable"]
+            },
+            "prep_time": {
+                "duration": 5,
+                "unit": "minutes"
+            },
+            "cook_time": {
+                "duration": 45,
+                "unit": "minutes"
+            },
+            "description": "A naturally sweet and soft option that requires minimal preparation.",
+            "ingredients": [
+                {"name": "Sweet potato", "notes": "Washed and poked with a fork"},
+                {"name": "Optional toppings", "options": ["butter", "cinnamon", "maple syrup", "plain yogurt"]}
+            ],
+            "preparation_steps": [
+                "Preheat oven to 400°F (200°C).",
+                "Place sweet potato directly on the oven rack or on a baking sheet.",
+                "Bake for 45-60 minutes, or until soft when pierced with a fork.",
+                "Slice open and add desired toppings."
+            ],
+            "executive_function_support": {
+                "difficulty_planning": true,
+                "difficulty_initiating": false,
+                "difficulty_monitoring": false
+            },
+            "notes": "Can bake multiple sweet potatoes at once for easy grab-and-go options."
+        }
+    ],
+    "sensory_considerations": {
+        "avoidance_triggers": {
+            "texture": ["crunchy", "slimy", "chewy (excessively)", "grainy", "stringy"],
+            "smell": ["strong", "pungent", "fishy", "sulfurous"],
+            "taste": ["bitter", "spicy (intense)", "acidic (overly)"],
+            "temperature": ["mixed temperatures", "sudden temperature changes"],
+            "appearance": ["visually overwhelming", "unidentifiable components"]
+        },
+        "preferred_sensory_profiles": {
+            "texture": ["smooth", "soft", "creamy", "uniform"],
+            "smell": ["mild", "pleasant", "familiar"],
+            "taste": ["mildly sweet", "mildly savory"],
+            "temperature": ["consistent"],
+            "appearance": ["simple", "identifiable"]
+        },
+        "texture_mapping": {
+            "crunchy": ["consider finely chopped or pureed alternatives", "offer a soft accompaniment"],
+            "slimy": ["avoid directly", "offer alternatives with different textures"],
+            "stringy": ["cut into small pieces", "choose stringless varieties"],
+            "strong_smells": ["cook in a well-ventilated area", "use milder alternatives (e.g., garlic powder instead of fresh)", "offer strongly scented items separately"],
+            "bitter": ["mask with mild sweetness", "choose less bitter varieties"],
+            "spicy": ["offer mild versions only", "provide cooling accompaniments (e.g., yogurt)"]
+        }
+    },
+    "executive_function_support_strategies": {
+        "difficulty_planning": [
+            "visual meal planners (e.g., picture boards)",
+            "theme days (e.g., Taco Tuesday)",
+            "repeatable weekly menus",
+            "batch cooking components (e.g., cooked grains, roasted vegetables)",
+            "utilizing meal delivery services or pre-made meals (when feasible)",
+            "keeping a list of 'safe' and preferred meals"
+        ],
+        "difficulty_initiating": [
+            "breaking down meal prep into small, manageable steps",
+            "setting timers for each step",
+            "pairing meal prep with a preferred activity (e.g., listening to music)",
+            "having all necessary ingredients and tools readily accessible",
+            "using pre-cut vegetables or other convenience items"
+        ],
+        "difficulty_monitoring": [
+            "using visual timers or alarms for cooking times",
+            "clear and concise recipes with step-by-step instructions",
+            "color-coded measuring cups and spoons",
+            "having someone assist with more complex steps"
+        ],
+        "difficulty_shifting": [
+            "providing clear warnings before mealtime changes",
+            "having a backup 'safe' food option available",
+            "gradually introducing new foods alongside familiar ones"
+        ],
+        "memory_challenges": [
+            "written or picture-based recipes displayed prominently",
+            "meal reminders on phones or visual schedules",
+            "labeling containers with contents and dates",
+            "keeping a running grocery list"
+        ]
+    },
+    "customization_options": {
+        "dietary_restrictions": ["vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free", "soy-free", "egg-free"],
+        "allergy_information": "Specify known allergies for personalized recommendations.",
+        "preferred_cuisines": ["Italian", "Mexican", "Asian", "American", "etc."],
+        "time_constraints": ["quick meals (under 15 minutes prep)", "moderate prep (15-30 minutes)", "longer prep (30+ minutes)"],
+        "available_equipment": ["blender", "food processor", "slow cooker", "instant pot", "oven", "stove top"]
+    },
+    "additional_notes": "This JSON is designed to be a flexible framework. You can expand upon it by adding more meals, specific sensory details, and further strategies for executive function support. Consider individual preferences and needs when utilizing this data."
+}
