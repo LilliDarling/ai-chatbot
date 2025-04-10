@@ -620,7 +620,7 @@ static char* extract_recipe_name(const char* query, QueryType query_type) {
             }
             break;
             
-        case QUERY_GENERAL:y
+        case QUERY_GENERAL:
             start_pos = query_lower;
             break;
             

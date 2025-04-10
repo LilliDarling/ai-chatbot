@@ -14,7 +14,7 @@
 #define MAX_INPUT_SIZE 1024
 #define MAX_OUTPUT_SIZE 4096
 #define MAX_COMMAND_SIZE (MAX_INPUT_SIZE * 2 + 100)
-#define JSON_PATH "./meal_data.json"
+#define JSON_PATH "C:/Users/valky/Repos/neurochef/meal_data.json"
 
 static RecipeDB* recipe_db = NULL;
 
@@ -51,7 +51,7 @@ char* get_python_response(const char* input) {
     static char output[MAX_OUTPUT_SIZE];
     if (!fgets(output, sizeof(output), pipe)) {
         int exit_code = pclose(pipe);
-        if (exit_code != 0) {d
+        if (exit_code != 0) {
             if (strstr(command, "python") != NULL) {
                 return "Error: Python not found. Please ensure Python is installed and in your PATH.";
             }
